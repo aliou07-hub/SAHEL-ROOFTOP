@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Sahel Rooftop</title>
+<meta name="description" content="Contactez Sahel Rooftop à Maroua, Carrefour Para. Téléphone, WhatsApp, adresse et itinéraire.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>if(localStorage.getItem('sahel_lang')){document.documentElement.classList.add('lang-set');}</script>
+<style>
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:44px;}
+  .contact-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:44px;
+    box-shadow:var(--shadow);
+  }
+  .contact-list{display:flex; flex-direction:column; gap:26px; margin-top:8px;}
+  .contact-list .row{display:flex; gap:16px; align-items:flex-start;}
+  .contact-list .ic{
+    width:40px; height:40px; flex:0 0 40px; border-radius:50%; border:1px solid var(--gold);
+    display:flex; align-items:center; justify-content:center; color:var(--gold-deep); font-size:1.05rem;
+  }
+  .contact-list .lbl{font-size:0.74rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em;}
+  .contact-list .val{font-size:1.02rem; margin-top:3px;}
+  .contact-list a.val:hover{color:var(--gold-deep);}
+  .contact-ctas{display:flex; gap:12px; margin-top:32px; flex-wrap:wrap;}
+  .btn-whatsapp{
+    background:#25D366; color:#fff; padding:14px 24px; border-radius:100px; font-size:0.88rem; font-weight:600;
+    display:inline-flex; align-items:center; gap:8px; transition:transform .3s ease;
+  }
+  .btn-whatsapp:hover{transform:translateY(-3px);}
+  .social-row{display:flex; gap:12px; margin-top:30px; flex-wrap:wrap;}
+  .social-row span{
+    border:1px solid var(--line); border-radius:100px; padding:9px 18px; font-size:0.82rem; color:var(--muted);
+    display:inline-flex; align-items:center; gap:7px;
+  }
+
+  .map-card{border:1px solid var(--line); border-radius:20px; overflow:hidden; box-shadow:var(--shadow); min-height:340px;}
+  .map-card iframe{width:100%; height:100%; min-height:340px; border:0; display:block;}
+
+  .hours-card{
+    background:var(--surface-2); border:1px solid var(--line); border-radius:16px; padding:24px 26px; margin-top:26px;
+  }
+  .hours-card h3{font-size:0.98rem; font-weight:450; margin-bottom:12px;}
+  .hours-row{display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px dashed var(--line); font-size:0.9rem;}
+  .hours-row:last-child{border-bottom:none;}
+  .hours-row .day{color:var(--ink);}
+  .hours-row .time{color:var(--gold-deep); font-weight:600;}
+
+  @media (max-width:900px){ .contact-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<header class="nav" id="siteNav">
+  <div class="brand">
+    <img src="assets/logo.jpg" alt="Sahel Rooftop">
+    <span>Sahel Rooftop</span>
+  </div>
+  <nav class="links" id="navLinks">
+    <a href="index.html" data-i18n="nav_home">Accueil</a>
+    <a href="menu.html" data-i18n="nav_menu">Menu</a>
+    <a href="apropos.html" data-i18n="nav_about">À propos</a>
+    <a href="apropos.html#experience" data-i18n="nav_experience">Expérience Rooftop</a>
+    <a href="galerie.html" data-i18n="nav_gallery">Galerie</a>
+    <a href="contact.html" class="current" data-i18n="nav_contact">Contact</a>
+    <div class="lang-switch">
+      <button data-lang="en">EN</button>
+      <button data-lang="fr">FR</button>
+    </div>
+    <div class="nav-quick-actions">
+      <a class="whatsapp-nav-btn" href="https://wa.me/237688106688" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" width="19" height="19" fill="#ffffff" aria-hidden="true"><path d="M12.02 2C6.5 2 2.02 6.48 2.02 12c0 1.87.5 3.62 1.38 5.13L2 22l5.02-1.36A9.96 9.96 0 0 0 12.02 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm0 18.13a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-2.98.81.8-2.9-.2-.3a8.1 8.1 0 1 1 6.81 3.7Z"/><path d="M16.9 14.38c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.18-1.34-.8-.72-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.4-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.44-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.26 0 1.33.97 2.62 1.11 2.8.14.18 1.91 2.92 4.63 4.09.65.28 1.15.45 1.54.57.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.29.23-.63.23-1.17.16-1.29-.07-.11-.25-.18-.52-.32Z"/></svg></a>
+      <button class="reserve-nav-btn" id="openBookingModal" type="button" data-i18n="nav_reserve">Réserver</button>
+    </div>
+    <a class="call-btn" href="tel:+237688106688" data-i18n="nav_order">Commander</a>
+  </nav>
+  <button class="burger" id="burgerBtn" aria-label="Menu">☰</button>
+</header>
+
+<div class="booking-modal-overlay" id="bookingModalOverlay">
+  <div class="booking-modal" role="dialog" aria-modal="true" aria-labelledby="modalBookingTitle">
+    <button class="modal-close" id="bookingModalClose" aria-label="Fermer">×</button>
+    <span class="eyebrow-tag" data-i18n="mbk_eyebrow">Réservation rapide</span>
+    <h3 id="modalBookingTitle" data-i18n="mbk_title">Réserver une table</h3>
+    <p class="modal-sub" data-i18n="mbk_text">Votre demande est envoyée directement sur WhatsApp au restaurant.</p>
+    <form id="modalBookingForm">
+      <div class="booking-grid">
+        <div class="field"><label for="mBkName" data-i18n="bk_name">Nom complet</label><input type="text" id="mBkName" required></div>
+        <div class="field"><label for="mBkPhone" data-i18n="bk_phone">Téléphone</label><input type="tel" id="mBkPhone" required></div>
+        <div class="field"><label for="mBkDate" data-i18n="bk_date">Date</label><input type="date" id="mBkDate" required></div>
+        <div class="field"><label for="mBkTime" data-i18n="bk_time">Heure</label><input type="time" id="mBkTime" required></div>
+        <div class="field full">
+          <label for="mBkGuests" data-i18n="bk_guests">Nombre de personnes</label>
+          <select id="mBkGuests" required>
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7+">7+</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn-solid" style="width:100%; margin-top:22px;" data-i18n="bk_submit">Envoyer ma demande via WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+
+<section class="page-hero">
+  <div class="page-hero-media" style="background-image:url('assets/building.jpg'); background-position:center 25%;"></div>
+  <div class="page-hero-scrim"></div>
+  <div class="page-hero-content wrap">
+    <span class="eyebrow-tag" data-i18n="ph_eyebrow">Venez nous voir</span>
+    <h1 data-i18n="ph_title">Contact</h1>
+    <p class="lede" data-i18n="ph_lede">Un appel suffit pour réserver votre table ou passer commande.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="contact-grid reveal">
+    <div class="contact-card">
+      <span class="eyebrow-tag" data-i18n="cc_eyebrow">Nous joindre</span>
+      <h2 style="font-size:clamp(1.6rem,2.8vw,2.1rem);" data-i18n="cc_title">Parlons de votre visite</h2>
+
+      <div class="contact-list">
+        <div class="row">
+          <div class="ic">◉</div>
+          <div>
+            <div class="lbl" data-i18n="lbl_address">Adresse</div>
+            <div class="val" data-i18n="val_address">Carrefour Para, en face du Marché du Dimanche, à côté du commissariat — Maroua, Cameroun</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="ic">☎</div>
+          <div>
+            <div class="lbl" data-i18n="lbl_phone">Téléphone</div>
+            <a class="val" href="tel:+237688106688">+237 688 10 66 88</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="ic">◷</div>
+          <div>
+            <div class="lbl" data-i18n="lbl_hours">Horaires</div>
+            <div class="val" data-i18n="val_hours">Restaurant & bar ouverts 7j/7 · Brunch buffet le dimanche, 12h – 19h</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-ctas">
+        <a class="btn-solid" href="tel:+237688106688" data-i18n="cta_call">Appeler maintenant</a>
+        <a class="btn-whatsapp" href="https://wa.me/237688106688" target="_blank" rel="noopener">
+          <span>●</span><span data-i18n="cta_whatsapp">WhatsApp</span>
+        </a>
+      </div>
+
+      <div class="social-row">
+        <span data-i18n="soc_fb">Facebook</span>
+        <span data-i18n="soc_ig">Instagram</span>
+        <span data-i18n="soc_tt">TikTok</span>
+      </div>
+
+      <div class="hours-card">
+        <h3 data-i18n="hc_title">Horaires détaillés</h3>
+        <div class="hours-row"><span class="day" data-i18n="hc_d1">Lundi – Samedi</span><span class="time" data-i18n="hc_t1">Restaurant & bar</span></div>
+        <div class="hours-row"><span class="day" data-i18n="hc_d2">Dimanche</span><span class="time" data-i18n="hc_t2">Brunch buffet · 12h – 19h</span></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="map-card">
+        <iframe
+          src="https://www.google.com/maps?q=Sahel+Rooftop+Carrefour+Para+Maroua+Cameroun&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Localisation Sahel Rooftop"></iframe>
+      </div>
+      <div class="tilt-wrap" style="margin-top:24px;">
+        <div class="tilt"><img src="assets/building.jpg" alt="Bâtiment Sahel Rooftop" style="aspect-ratio:16/10; object-fit:cover; width:100%;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="booking-card reveal">
+    <span class="eyebrow-tag" data-i18n="bk_eyebrow">Réservation en ligne</span>
+    <h2 style="font-size:clamp(1.7rem,3vw,2.3rem);" data-i18n="bk_title">Réserver une table</h2>
+    <p style="color:var(--muted); margin-top:12px; max-width:52ch;" data-i18n="bk_text">Veuillez réserver une table en remplissant vos informations ci-dessous. Vous avez aussi la possibilité de nous écrire directement sur WhatsApp si vous avez la moindre question.</p>
+
+    <form id="bookingForm">
+      <div class="booking-grid">
+        <div class="field">
+          <label for="bkName" data-i18n="bk_name">Nom complet</label>
+          <input type="text" id="bkName" required placeholder="Votre nom">
+        </div>
+        <div class="field">
+          <label for="bkPhone" data-i18n="bk_phone">Téléphone</label>
+          <input type="tel" id="bkPhone" required placeholder="+237 6 XX XX XX XX">
+        </div>
+        <div class="field">
+          <label for="bkDate" data-i18n="bk_date">Date</label>
+          <input type="date" id="bkDate" required>
+        </div>
+        <div class="field">
+          <label for="bkTime" data-i18n="bk_time">Heure</label>
+          <input type="time" id="bkTime" required>
+        </div>
+        <div class="field">
+          <label for="bkGuests" data-i18n="bk_guests">Nombre de personnes</label>
+          <select id="bkGuests" required>
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7+">7+</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="bkOccasion" data-i18n="bk_occasion">Occasion (optionnel)</label>
+          <select id="bkOccasion">
+            <option value="" data-i18n="bk_occ0">Aucune</option>
+            <option value="Anniversaire" data-i18n="bk_occ1">Anniversaire</option>
+            <option value="Rendez-vous d'affaires" data-i18n="bk_occ2">Rendez-vous d'affaires</option>
+            <option value="Célébration en famille" data-i18n="bk_occ3">Célébration en famille</option>
+            <option value="Brunch du dimanche" data-i18n="bk_occ4">Brunch du dimanche</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="bkMessage" data-i18n="bk_message">Message (optionnel)</label>
+          <textarea id="bkMessage" placeholder=""></textarea>
+        </div>
+      </div>
+
+      <div class="booking-submit">
+        <button type="submit" class="btn-solid" data-i18n="bk_submit">Envoyer ma demande via WhatsApp</button>
+      </div>
+      <div class="booking-note" data-i18n="bk_note">Aucune donnée n'est enregistrée sur ce site — votre demande est transmise directement au restaurant.</div>
+      <div class="booking-success" id="bookingSuccess" data-i18n="bk_success">Merci ! WhatsApp s'ouvre avec votre demande de réservation pré-remplie.</div>
+    </form>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div class="footer-row">
+    <div class="brand"><img src="assets/logo.jpg" alt="Sahel Rooftop"><span>Sahel Rooftop</span></div>
+    <div class="footer-links">
+      <a href="apropos.html" data-i18n="nav_about">À propos</a>
+      <a href="menu.html" data-i18n="nav_menu">Menu</a>
+      <a href="brunch.html">Brunch</a>
+      <a href="galerie.html" data-i18n="nav_gallery">Galerie</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+    </div>
+  </div>
+  <div class="fine" style="margin-top:18px;" data-i18n="footer_tagline">Restaurant · Bar · Traiteur · Brunchs · Grillades · Événements — Maroua</div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+const bookingForm = document.getElementById('bookingForm');
+if (bookingForm) {
+  bookingForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('bkName').value.trim();
+    const phone = document.getElementById('bkPhone').value.trim();
+    const date = document.getElementById('bkDate').value;
+    const time = document.getElementById('bkTime').value;
+    const guests = document.getElementById('bkGuests').value;
+    const occasion = document.getElementById('bkOccasion').value;
+    const message = document.getElementById('bkMessage').value.trim();
+
+    const lines = [
+      "Bonjour Sahel Rooftop, je souhaite réserver une table :",
+      "• Nom : " + name,
+      "• Téléphone : " + phone,
+      "• Date : " + date,
+      "• Heure : " + time,
+      "• Nombre de personnes : " + guests,
+    ];
+    if (occasion) lines.push("• Occasion : " + occasion);
+    if (message) lines.push("• Message : " + message);
+
+    const text = encodeURIComponent(lines.join("\n"));
+    window.open("https://wa.me/237688106688?text=" + text, "_blank");
+
+    const success = document.getElementById('bookingSuccess');
+    if (success) success.classList.add('show');
+  });
+}
+
+const dict = {
+  fr: {
+    nav_home:"Accueil", nav_menu:"Menu", nav_about:"À propos", nav_experience:"Expérience Rooftop",
+    nav_gallery:"Galerie", nav_contact:"Contact", nav_order:"Commander",
+    nav_whatsapp:"WhatsApp", nav_reserve:"Réserver",
+    mbk_eyebrow:"Réservation rapide", mbk_title:"Réserver une table",
+    mbk_text:"Votre demande est envoyée directement sur WhatsApp au restaurant.",
+    bk_eyebrow:"Réservation en ligne", bk_title:"Réserver une table",
+    bk_text:"Veuillez réserver une table en remplissant vos informations ci-dessous. Vous avez aussi la possibilité de nous écrire directement sur WhatsApp si vous avez la moindre question.",
+    bk_name:"Nom complet", bk_phone:"Téléphone", bk_date:"Date", bk_time:"Heure",
+    bk_guests:"Nombre de personnes", bk_occasion:"Occasion (optionnel)",
+    bk_occ0:"Aucune", bk_occ1:"Anniversaire", bk_occ2:"Rendez-vous d'affaires",
+    bk_occ3:"Célébration en famille", bk_occ4:"Brunch du dimanche",
+    bk_message:"Message (optionnel)", bk_submit:"Envoyer ma demande via WhatsApp",
+    bk_note:"Aucune donnée n'est enregistrée sur ce site — votre demande est transmise directement au restaurant.",
+    bk_success:"Merci ! WhatsApp s'ouvre avec votre demande de réservation pré-remplie.",
+    ph_eyebrow:"Venez nous voir", ph_title:"Contact",
+    ph_lede:"Un appel suffit pour réserver votre table ou passer commande.",
+    cc_eyebrow:"Nous joindre", cc_title:"Parlons de votre visite",
+    lbl_address:"Adresse", val_address:"Carrefour Para, en face du Marché du Dimanche, à côté du commissariat — Maroua, Cameroun",
+    lbl_phone:"Téléphone", lbl_hours:"Horaires",
+    val_hours:"Restaurant & bar ouverts 7j/7 · Brunch buffet le dimanche, 12h – 19h",
+    cta_call:"Appeler maintenant", cta_whatsapp:"WhatsApp",
+    soc_fb:"Facebook", soc_ig:"Instagram", soc_tt:"TikTok",
+    hc_title:"Horaires détaillés", hc_d1:"Lundi – Samedi", hc_t1:"Restaurant & bar",
+    hc_d2:"Dimanche", hc_t2:"Brunch buffet · 12h – 19h",
+    footer_tagline:"Restaurant · Bar · Traiteur · Brunchs · Grillades · Événements — Maroua"
+  },
+  en: {
+    nav_home:"Home", nav_menu:"Menu", nav_about:"About us", nav_experience:"Rooftop experience",
+    nav_gallery:"Gallery", nav_contact:"Contact", nav_order:"Order now",
+    nav_whatsapp:"WhatsApp", nav_reserve:"Book a table",
+    mbk_eyebrow:"Quick booking", mbk_title:"Book a table",
+    mbk_text:"Your request is sent straight to the restaurant on WhatsApp.",
+    bk_eyebrow:"Online booking", bk_title:"Book a table",
+    bk_text:"Please book a table by filling in your details below. You're also welcome to write to us directly on WhatsApp if you have any questions.",
+    bk_name:"Full name", bk_phone:"Phone", bk_date:"Date", bk_time:"Time",
+    bk_guests:"Number of guests", bk_occasion:"Occasion (optional)",
+    bk_occ0:"None", bk_occ1:"Birthday", bk_occ2:"Business meeting",
+    bk_occ3:"Family celebration", bk_occ4:"Sunday brunch",
+    bk_message:"Message (optional)", bk_submit:"Send my request via WhatsApp",
+    bk_note:"No data is stored on this site — your request is sent directly to the restaurant.",
+    bk_success:"Thank you! WhatsApp is opening with your pre-filled booking request.",
+    ph_eyebrow:"Come see us", ph_title:"Contact",
+    ph_lede:"One call is all it takes to book your table or place an order.",
+    cc_eyebrow:"Get in touch", cc_title:"Let's talk about your visit",
+    lbl_address:"Address", val_address:"Carrefour Para, opposite the Sunday Market, next to the police station — Maroua, Cameroon",
+    lbl_phone:"Phone", lbl_hours:"Hours",
+    val_hours:"Restaurant & bar open 7 days a week · Sunday buffet brunch, 12pm – 7pm",
+    cta_call:"Call now", cta_whatsapp:"WhatsApp",
+    soc_fb:"Facebook", soc_ig:"Instagram", soc_tt:"TikTok",
+    hc_title:"Detailed hours", hc_d1:"Monday – Saturday", hc_t1:"Restaurant & bar",
+    hc_d2:"Sunday", hc_t2:"Buffet brunch · 12pm – 7pm",
+    footer_tagline:"Restaurant · Bar · Catering · Brunches · Grillades · Events — Maroua"
+  }
+};
+initLanguage(dict);
+</script>
+</body>
+</html>
